@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/smartCangZhouDocument/', // 仓库名
   title: "smartCangZhouDoc",
   description: "smartcangzhou miniprogram's interface docuoment",
   themeConfig: {
