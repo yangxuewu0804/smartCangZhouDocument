@@ -100,7 +100,7 @@ function handleClick() {
     <CodeDisplay :code="codeString"></CodeDisplay>
 </Auth>
 
-## API
+## 服务器接口
 <Auth tip="请求地址">
     <div style="background-color: #f49623">
     请求地址：【GET】https://api.smartcangzhou.cn:19091/appApi/faceVerify
