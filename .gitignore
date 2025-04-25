@@ -1,0 +1,15 @@
+# 开发环境
+.vscode/
+.idea/
+
+# 忽略所有的node_modules目录
+node_modules/
+ 
+# 忽略所有的日志文件
+*.log
+ 
+# 忽略所有的编译后的文件
+dist/
+ 
+# 忽略npm的调试日志
+npm-debug.log*
