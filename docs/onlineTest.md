@@ -10,6 +10,4 @@
 
 提供测试链接。微信小程序后台配置地址才能打开体验版的小程序。
 
-	示例：http://qr.smartcangzhou.cn?redirect=[redirect_id]&param1=''&param2=''
-
 ### 其他测试无需其他配置，直接在体验版本测试即可。
