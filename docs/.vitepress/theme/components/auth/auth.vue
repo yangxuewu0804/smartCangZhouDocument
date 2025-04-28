@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="container__item">
+		<div v-show="!authResult" class="container__item">
 			<form class="form" @submit.prevent="submit">
 				<input type="password" v-model="password" class="form__field" :placeholder="'请输入密码查看' + (tip || '')" />
 				<button type="button" class="btn btn--primary btn--inside uppercase" @click="submit">查看</button>
