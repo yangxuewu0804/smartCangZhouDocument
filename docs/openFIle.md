@@ -4,14 +4,16 @@
 
 ## 示例代码
 <script setup>
-const codeString = ` 
+import {ref} from "vue"; 
+
+const codeString = ref(` 
 import wx from "weixin-js-sdk";
 function jump() {
     wx.miniProgram.navigateTo({
         url: \`/pages/openPage/filePage/filePage?fileUrl=\${encodeURIComponent('https://h5.com/20250327/20250327/ac80741c.pdf')}\`,
     });
 }
-`
+`)
 </script>
 
 <CodeDisplay :code="codeString"></CodeDisplay>
