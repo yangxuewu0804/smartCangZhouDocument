@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "SmartCangZhouDocument"
-  text: "Interface document of smart smartcangzhou applet"
+  name: "智慧沧州"
+  text: "智慧沧州小程序接入应用的技术文档"
   tagline: 
   actions:
     - theme: brand
-      text: Examples
+      text: 示例
       link: /onlineApp
 
 # features:

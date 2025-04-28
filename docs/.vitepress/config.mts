@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/smartCangZhouDocument/', // 仓库名
-  title: "smartCangZhouDoc",
+  title: "智慧沧州对接文档",
   description: "smartcangzhou miniprogram's interface docuoment",
   themeConfig: {
     search: {
@@ -10,8 +10,8 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/onlineApp' }
+      { text: '首页', link: '/' },
+      { text: '示例', link: '/onlineApp' }
     ],
     sidebar: [
       {
@@ -28,7 +28,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      // { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
   publicDir: './public'

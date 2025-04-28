@@ -13,7 +13,6 @@ function jump() {
 }
 `
 </script>
-<Auth tip="代码示例">
+
 <CodeDisplay :code="codeString"></CodeDisplay>
-</Auth>
 

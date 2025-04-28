@@ -15,16 +15,19 @@
 </template>
 <script setup>
 import {ref, defineProps} from 'vue'
-
+import {decryptString} from "../../../../../utils/encrypt.js";
+import emitter from "../../../../../utils/mitt.js";
 const authResult = ref('')
 const password = ref('')
 const showAnimation = ref(false)
 
-const props = defineProps(['tip'])
+const props = defineProps(['tip', 'content'])
 function submit() {
 	getHash(password.value).then(hash => {
 		if(hash === 'c76a73e02048522e76f4f1413cb1dcb599e439e787047d334e40172882541e64') {
 			authResult.value = true
+			encrypt()
+			emitter.emit('deliveryPassword', password.value)
 		} else {
 			authResult.value = false
 			showAnimation.value = true
@@ -33,6 +36,13 @@ function submit() {
 			}, 820) // 动画持续时间 + 一点缓冲时间
 		}
 	});
+}
+function encrypt() {
+	const doc = document.querySelectorAll('#encryptInfo')
+	doc.forEach(item => {
+		const cleanedText = item.textContent.replace(/\s*\n\s*/g, ' ').trim();
+		item.textContent = decryptString(cleanedText, password.value);
+	})
 }
 async function getHash(str) {
 	const msgUint8 = new TextEncoder().encode(str); // 将字符串转换为Uint8Array

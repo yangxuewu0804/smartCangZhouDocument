@@ -9,7 +9,7 @@
 上线应用需要第三方在提供的应用URL的域名服务器中配置微信小程序校验文件，具体请参考[微信小程序域名校验文件](https://developers.weixin.qq.com/community/develop/doc/0000a423770ed0c6d80323d6c6b009?%2Fblogdetail%3Faction=get_post_info)。
 
 <Auth tip="智慧沧州校验文件">
-    <FileDownLoad url="./file/fsyVaVww3x.txt" filename="fsyVaVww3x.txt"></FileDownLoad>
+    <FileDownLoad content="U2FsdGVkX19d5viWqsY6BScKldVaChRSsuz3XrQKPcO1MvQH2MIMIIoSs8ejbfz4OCu0DndBnuyOEGGWnRMJNQ==" filename="fsyVaVww3x.txt"></FileDownLoad>
 </Auth>
 
 ::: tip

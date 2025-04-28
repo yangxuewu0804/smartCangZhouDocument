@@ -6,7 +6,7 @@
 
 ## 调用流程如下：
 
-**1.在用户打开应用URL时，小程序端会生产一个code（有效期5分钟），并将该code附加在url参数中，参数名称为”code”。例如：https://baidu.com?code=MHqiJD4aw7wVZ1TC** 
+**1.在用户打开应用URL时，小程序端会生产一个code（有效期5分钟），并将该code附加在url参数中，参数名称为”code”。例如：https://h5.com?code=MHqiJD4aw7wVZ1TC** 
 
 ```
  url地址：https://h5.com?code=''&appKey=''
@@ -15,13 +15,11 @@
 ```
 
 **2.应用H5端通过读取url参数获取code值，还需携带应用的app_key、secret_key（app_key、secret_key由智慧沧州管理员提供。其中secret_key应妥善保存，不要泄露也不要遗失。如果遗失将无法找回，只能由智慧沧州管理员重置）,然后传递给应用服务端。核验成功后将返回加密后的用户信息（加密秘钥由智慧沧州管理员提供)**
-<script setup>
-</script>
-<Auth tip="请求地址">
-<div style="background-color: #f49623">
-请求地址：【POST】https://api.smartcangzhou.cn:19091/appApi/userInfo
-</div>
 
+<Auth tip="请求地址">
+    <div id="encryptInfo" style="background-color: #f49623">
+        U2FsdGVkX1+S5v9CiLX76Y92mWvTcO3Rtn75hcOLf1VgjYIZ2iy1S3TkFSMi3qqJahVfSsStxRUswdKmgDKfbnB0dgG7Ch6utVxvM65vOOQ=
+    </div>
 </Auth>
 
 
@@ -54,8 +52,8 @@ System.out.println(decryptedStr);
 
 ```
 {
-    "openid": "yuanshenqidong666", // 	用户的微信openid	
-    "name": "钟离", // 		用户姓名	
+    "openid": "openid", // 	用户的微信openid	
+    "name": "张三", // 		用户姓名	
     "idCardNumber": "111222199911118888", // 用户身份证号(字母小写)
     "phoneNumber": "19912345678" // 用户手机号
 }

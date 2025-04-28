@@ -6,14 +6,10 @@
 [微信小程序文档](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#21)
 ### 跳转标签需要的小程序信息
 
-```
-{
-    appid：'wxebcca20008b64ffc', // 智慧沧州小程序的appid
-    username: 'gh_4ce98db8a624' // 小程序原始id，appid和username二选一即可
-    env-version: 'trial', // 根据环境自行切换 trial/release
-    path: "pages/index/index?redirect=[redirect_id]&param1=''&param2=''"  // redirect（智慧沧州管理员提供，param1、param2为自定义参数）
-}
-```
+
+<Auth tip="智慧沧州appid">
+    <FileDownLoad content="U2FsdGVkX184lXBFHVNIGnFRJiH/bBeABfELAmffWb2ifr2Ocbdh0T0bL+cLatuUq9PnGyYY93WgefBYfV9Y+YSVZ/KugXJ4xgFxOoVj+YIoOoaQqhn0CBPR4cF2s5qK+yQeTxHIDm4Nx3Ysd7i/gmDCIWBiXX24tNh5MuMu3P1x3eBzUJNeNFxpxlZOkItGW7IfY2AO5wsKioizqEFiPbbuJ+XuFEp+E3v8dL3bkig=" filename="智慧沧州小程序appid.txt"></FileDownLoad>
+</Auth>
 
 ### 小程序跳转回h5的链接
 https://h5url/?code=zdQQgNiwO82kVBiF&appKey=lApGyOPbyEhZceh4tMu1a&param1=‘’&param2=''

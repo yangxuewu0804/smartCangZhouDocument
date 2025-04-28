@@ -96,14 +96,12 @@ function handleClick() {
 }
 `
 </script>
-<Auth tip="代码示例">
-    <CodeDisplay :code="codeString"></CodeDisplay>
-</Auth>
+<CodeDisplay :code="codeString"></CodeDisplay>
 
 ## 服务器接口
 <Auth tip="请求地址">
-    <div style="background-color: #f49623">
-    请求地址：【GET】https://api.smartcangzhou.cn:19091/appApi/faceVerify
+    <div id="encryptInfo" style="background-color: #f49623">
+        U2FsdGVkX1+CZ4UiBSFvkrFVvetOD915DjmG+4YWH1NQCmHABQpwr1I5utqV14E6LGg3D3qwRblUzEuC6bGyGrdC+nFwF0oShKtEn99/7Qg=
     </div>
 </Auth>
 
