@@ -6,7 +6,7 @@
 
 ## 调用流程如下：
 
-**1.在用户打开应用URL时，小程序端会生产一个code（有效期5分钟），并将该code附加在url参数中，参数名称为”code”。例如：https://h5.com?code=MHqiJD4aw7wVZ1TC** 
+**1.在用户打开应用URL时，小程序端会生产一个code（单次使用且有效期5分钟），并将该code附加在url参数中，参数名称为”code”。例如：https://h5.com?code=MHqiJD4aw7wVZ1TC** 
 
 ```
  url地址：https://h5.com?code=''&appKey=''
