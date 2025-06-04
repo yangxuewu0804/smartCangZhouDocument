@@ -8,7 +8,7 @@ export function encryptString(data, secretKey) {
     return CryptoJS.AES.encrypt(data, secretKey).toString();
 }
 
-// console.log(encryptString(data, secretKey));
+// console.log(encryptString(data, secretKey ));
 
 export function decryptString(encryptedData, secretKey) {
     const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey);

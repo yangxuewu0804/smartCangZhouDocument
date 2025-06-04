@@ -1,10 +1,10 @@
-# 调用智慧沧州人脸核身功能
+# 跳转支付页面
 
-此文档是第三方应用调用智慧沧州人脸核身功能的流程介绍。
+此文档是第三方应用进行支付的流程介绍。进行开发前请先行联系智慧沧州管理员确认方案。
 
-h5携带参数跳转微信小程序指定界面，用户在该界面完成人脸核身后，该页面会返回给第三方应用参数，第三方应用拿到参数后，调用智慧沧州api获得最终检验结果。
+第三方应用在自己的服务端进行下单，然后携带预支付订单等信息跳转到智慧沧州支付页面进行支付。
 
-## 前端示例代码
+## 调用流程如下：
 请根据业务自行修改，以下代码仅为小程序和网页通信示例。
 <script setup>
 const codeString = `
@@ -78,17 +78,17 @@ function jumpToMiniProgramPage(url) {
 }
 
 function handleClick() {
-  var url = "/pages/openPage/realNameAuth/realNameAuth?name=姓名&idCardNumber=身份证号&otherParams=12";
+   var url = "/pages/openPage/payment/payment?prepayId=12&paySign=12&timeStamp=23&nonceStr=12&otherParams=12";
   jumpToMiniProgramPage(url)
       .then(({ errorCode, message, data }) => {
-        /*
-        *   errorCode  0:成功，-1：用户直接返回未验证， 1：验证失败（包含设备不支持等因素）
-        *   message: 错误提示
-        *   data: 传给验证页面的其他参数（otherParams等参数）
-        *   errorCode等于0时，data中存在verifyResult参数用于验证人脸核身结果
-        */
+        // errorCode: -1 ,参数传错了
+        // errorCode: 0 ,支付成功
+        // errorCode:1, 支付取消
+        // errorCode:2, 支付错误
+        // errorCode:3, 用户主动返回（未点击立即支付）
+        // data: 传给小程序的不必要参数{otherParams:12}
         alert(\`获取成功: \${JSON.stringify(data)}\` + message);
-        书写代码逻辑位置
+        //书写代码逻辑位置
       })
       .catch(({ errorCode, message, data }) => {
         alert(\`获取失败: \${message}\` + msg);
@@ -97,40 +97,3 @@ function handleClick() {
 `
 </script>
 <CodeDisplay :code="codeString"></CodeDisplay>
-
-## 服务器接口
-<Auth tip="请求地址">
-    <div id="encryptInfo" style="background-color: #f49623">
-        U2FsdGVkX1+CZ4UiBSFvkrFVvetOD915DjmG+4YWH1NQCmHABQpwr1I5utqV14E6LGg3D3qwRblUzEuC6bGyGrdC+nFwF0oShKtEn99/7Qg=
-    </div>
-</Auth>
-
-``` 
-{
-    app_key: "",   // 应用ak
-    secret_key: "", // 应用sk
-    name:"", // 需验证用户名
-    id_card: "", // 需验证用户身份证号
-    verify_result:"" // 前端传回的参数
-}
-```
-### 响应示例
-
-•成功(200)
-```
-{
-"errorCode": 0 //错误码，0表示核验成功，1004校验失败
-}
-```
-
-•失败(200)
-```
-{
-"errorCode": 1004 //错误码，0表示核验成功，1004校验失败
-}
-```
-
-:::tip
-需要注意的是router-view标签，不用使用router.fullpath当做key。
-:::
-

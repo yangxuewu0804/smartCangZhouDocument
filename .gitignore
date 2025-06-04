@@ -4,7 +4,7 @@
 
 # 忽略所有的node_modules目录
 node_modules/
-
+docs/.vitepress/dist
 # 忽略所有的日志文件
 *.log
 
