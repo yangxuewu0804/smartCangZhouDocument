@@ -78,6 +78,7 @@ function jumpToMiniProgramPage(url) {
 }
 
 function handleClick() {
+    // 请对参数进行encodeURLComponent编码后，加入到地址中
    var url = "/pages/openPage/payment/payment?prepayId=12&paySign=12&timeStamp=23&nonceStr=12&otherParams=12";
   jumpToMiniProgramPage(url)
       .then(({ errorCode, message, data }) => {
