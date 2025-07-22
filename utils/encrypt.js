@@ -15,4 +15,4 @@ export function decryptString(encryptedData, secretKey) {
     return bytes.toString(CryptoJS.enc.Utf8);
 }
 // const aaa = ''
-// console.log(decryptString(aaa, secretKey));
+// console.log(encryptString(aaa, secretKey));

@@ -18,7 +18,7 @@
 
 <Auth tip="请求地址">
     <div id="encryptInfo" style="background-color: #f49623">
-        U2FsdGVkX1+S5v9CiLX76Y92mWvTcO3Rtn75hcOLf1VgjYIZ2iy1S3TkFSMi3qqJahVfSsStxRUswdKmgDKfbnB0dgG7Ch6utVxvM65vOOQ=
+        U2FsdGVkX190heP5/0gRGugdibEi22lU5tY7ltUpf7lcgfIcgveRr9L3DbdNmRTslJUPmz0DNBxyEHkX1hjYnrHeJ8sitkq2NLULfnLmdFA=
     </div>
 </Auth>
 
